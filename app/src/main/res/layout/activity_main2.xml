@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceff1"
+    tools:context="com.developer.image.rafaela.act.Main2Activity">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULTADO FINAL"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="6code384@gmail.com"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/verificar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/nome"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignRight="@+id/nome"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_below="@+id/idade"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimary"
+        android:text="Verificar"
+        android:textColor="@color/cor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/nome"
+        android:layout_alignLeft="@+id/verificar"
+        android:layout_alignRight="@+id/nome"
+        android:layout_alignStart="@+id/verificar"
+        android:layout_alignTop="@+id/verificar"
+        android:layout_marginTop="62dp"
+        android:background="@color/cor"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView17"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_below="@+id/textView18"
+        android:layout_marginTop="29dp"
+        android:background="@color/cor"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idade"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nome"
+        android:layout_alignStart="@+id/nome"
+        android:layout_below="@+id/nome"
+        android:layout_marginTop="16dp"
+        android:background="@color/cor"
+        android:ems="10"
+        android:inputType="number"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOME:"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/nome"
+        android:layout_alignBottom="@+id/nome"
+        android:layout_toLeftOf="@+id/textView18"
+        android:layout_toStartOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_alignTop="@+id/idade"
+        android:text="IDADE:"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/novoteste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resultado"
+        android:layout_alignStart="@+id/resultado"
+        android:layout_below="@+id/resultado"
+        android:layout_marginTop="34dp"
+        android:text="NOVO TESTE  ?"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
