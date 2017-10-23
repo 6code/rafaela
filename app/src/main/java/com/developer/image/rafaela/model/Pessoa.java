@@ -1,8 +1,7 @@
 package com.developer.image.rafaela.model;
 
 
-
-public class pessoa {
+public class Pessoa {
 
     private String resultado;
     private String nome;
