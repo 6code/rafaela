@@ -2,6 +2,9 @@ package com.developer.image.rafaela.model;
 
 public class CalculaIndices {
 
+    private String msg;
+    private String nome;
+    private Integer idade;
 
     private long C10M;
     private long LPS;
@@ -12,7 +15,6 @@ public class CalculaIndices {
 
 
 
-
     public CalculaIndices(long c10M, long LPS, long LPDV, long VTC, long LCLC) {
 
         C10M = c10M;
@@ -20,6 +22,31 @@ public class CalculaIndices {
         this.LPDV = LPDV;
         this.VTC = VTC;
         this.LCLC = LCLC;
+    }
+
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
     }
 
     public long getC10M() {
@@ -67,130 +94,124 @@ public class CalculaIndices {
 
     }
 
-    public String calcularIG(int idade) {
+    public void calcularIG() {
 
-        String msg = null;
 
         this.IG = (((this.C10M + this.LPS + this.LPDV + this.VTC) * 2) + this.LCLC) / 4;
 
-        if (idade >= 50 && idade <= 59) {
+        if (this.idade >= 50 && this.idade <= 59) {
 
-            msg = "";
+            this.msg = "";
 
 
-        } else if (idade >= 60 && idade <= 64) {
+        } else if (this.idade >= 60 && this.idade <= 64) {
 
             if (this.IG < 22280) {
 
-                msg = "MUITO BOM";
+                this.msg = "MUITO BOM";
 
             } else if (this.IG > 22208 && this.IG < 27430) {
 
-                msg = "BOM";
+                this.msg = "BOM";
 
             } else if (this.IG > 27440 && this.IG < 33010) {
 
-                msg = "REGULAR";
+                this.msg = "REGULAR";
 
             } else if (this.IG < 33010) {
 
-                msg = "INSUFICIENTE";
+                this.msg = "INSUFICIENTE";
 
             }
 
 
-        } else if (idade >= 65 && idade <= 69) {
+        } else if (this.idade >= 65 && this.idade <= 69) {
 
 
             if (this.IG < 22820) {
 
-                msg = "MUITO BOM";
+                this.msg = "MUITO BOM";
 
             } else if (this.IG > 22820 && this.IG < 28100) {
 
-                msg = "BOM";
+                this.msg = "BOM";
 
             } else if (this.IG > 28110 && this.IG < 33710) {
 
-                msg = "REGULAR";
+                this.msg = "REGULAR";
 
             } else if (this.IG < 33710) {
 
-                msg = "INSUFICIENTE";
+                this.msg = "INSUFICIENTE";
 
             }
 
 
-        } else if (idade >= 70 && idade <= 74) {
+        } else if (this.idade >= 70 && this.idade <= 74) {
 
 
             if (this.IG < 23370) {
 
-                msg = "MUITO BOM";
+                this.msg = "MUITO BOM";
 
             } else if (this.IG > 23370 && this.IG < 28770) {
 
-                msg = "BOM";
+                this.msg = "BOM";
 
             } else if (this.IG > 20770 && this.IG < 34410) {
 
-                msg = "REGULAR";
+                this.msg = "REGULAR";
 
             } else if (this.IG < 34410) {
 
-                msg = "INSUFICIENTE";
+                this.msg = "INSUFICIENTE";
 
             }
 
 
-        } else if (idade >= 75 && idade <= 79) {
+        } else if (this.idade >= 75 && this.idade <= 79) {
 
             if (this.IG < 23910) {
 
-                msg = "MUITO BOM";
+                this.msg = "MUITO BOM";
 
             } else if (this.IG > 23910 && this.IG < 29450) {
 
-                msg = "BOM";
+                this.msg = "BOM";
 
             } else if (this.IG > 29460 && this.IG < 35110) {
 
-                msg = "REGULAR";
+                this.msg = "REGULAR";
 
             } else if (this.IG < 35110) {
 
-                msg = "INSUFICIENTE";
+                this.msg = "INSUFICIENTE";
 
             }
 
 
-        } else if (idade >= 80) {
+        } else if (this.idade >= 80) {
 
 
             if (this.IG < 24460) {
 
-                msg = "MUITO BOM";
+                this.msg = "MUITO BOM";
 
             } else if (this.IG > 24460 && this.IG < 30120) {
 
-                msg = "BOM";
+                this.msg = "BOM";
 
             } else if (this.IG > 30130 && this.IG < 35810) {
 
-                msg = "REGULAR";
+                this.msg = "REGULAR";
 
             } else if (this.IG < 35810) {
 
-                msg = "INSUFICIENTE";
+                this.msg = "INSUFICIENTE";
 
             }
 
-
         }
-
-        return msg;
     }
-
-
 
 }

@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.developer.image.rafaela.R;
 import com.developer.image.rafaela.model.CalculaIndices;
-import com.developer.image.rafaela.model.Pessoa;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +27,7 @@ import jxl.write.biff.RowsExceededException;
 
 public class Main2Activity extends AppCompatActivity {
 
-    File folder = new File(Environment.getExternalStorageDirectory() + "/GDLAM"); //caminho da pasta que ira ser criada no diretorio interno
+
     private TextView novoTest;
     private TextView resultado;
     private Button verificar;
@@ -39,11 +38,11 @@ public class Main2Activity extends AppCompatActivity {
     private long l3;
     private long l4;
     private long l5;
-    private Pessoa p;
+
     private CalculaIndices c;
-    private String msg;
     private WritableWorkbook wb = null;
     private File file;
+    private File folder = new File(Environment.getExternalStorageDirectory() + "/GDLAM"); //caminho da pasta que ira ser criada no diretorio interno
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +61,6 @@ public class Main2Activity extends AppCompatActivity {
 
 
         //recuperando elementos da interface pelo id
-
         novoTest = (TextView) findViewById(R.id.novoteste);
         resultado = (TextView) findViewById(R.id.resultado);
         verificar = (Button) findViewById(R.id.verificar);
@@ -71,7 +69,6 @@ public class Main2Activity extends AppCompatActivity {
 
 
         //recuperando parametros passado pela act
-
         Bundle bundle = getIntent().getExtras();
 
         l1 = bundle.getLong("resultado1");
@@ -80,12 +77,9 @@ public class Main2Activity extends AppCompatActivity {
         l4 = bundle.getLong("resultado4");
         l5 = bundle.getLong("resultado5");
 
-        c = new CalculaIndices(l1, l2, l3, l4, l5); //passa os parametros para o objeto Calcula indecies
-        p = new Pessoa();
-
+        c = new CalculaIndices(l1, l2, l3, l4, l5); //passa os parametros para o construtor da classe Calcula indecies
 
         //evento de clique no botão para verificar os resultados
-
         verificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,13 +91,10 @@ public class Main2Activity extends AppCompatActivity {
 
                 }else{
 
-
-                    msg = c.calcularIG(p.getIdade()); //o metodd retorna uma string com o resultado do teste
-
-                    p.setResultado(c.getIG() + msg); //seta o resutaldo no objeto pessoa
-
-                    resultado.setText(p.getResultado()); //seta o resuktado no edittext
-
+                    c.setNome(nome.getText().toString()); //seta o nome digitado
+                    c.setIdade(Integer.valueOf(idade.getText().toString())); //seta idade digitada
+                    c.calcularIG(); //calcula o IG
+                    resultado.setText(c.getMsg()); //seta msg de resultado no textView
                     InserirTabela(); //insere o resultado na tabela
 
                 }
@@ -121,10 +112,7 @@ public class Main2Activity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
-
 
     // cria uma tabela padrão para inserir os resultados
     public void criarTabela(){
@@ -158,12 +146,10 @@ public class Main2Activity extends AppCompatActivity {
         Label label7 = new Label(6,0,"LCLC(ms)");
         Label label8 = new Label(7,0,"RESULTADO+IG");
 
-
         // Como o método pode levantar exceção '
         // iremos coloca-lo dentro de um try/catch
 
         try {
-
 
             plan.addCell(label1);
             plan.addCell(label2);
@@ -176,8 +162,6 @@ public class Main2Activity extends AppCompatActivity {
 
             wb.write(); //escreve
             wb.close(); //e fecha o arquivo
-
-
 
         } catch (RowsExceededException e1) {
             e1.printStackTrace();
@@ -196,14 +180,12 @@ public class Main2Activity extends AppCompatActivity {
 
         Workbook workbook = null;
         int j = 0;
-
         File file2 = new File(folder, "GDLAM.xls");
 
         try {
 
             File folder2 = new File(Environment.getExternalStorageDirectory()+"/GDLAM/GDLAM.xls");
             workbook = Workbook.getWorkbook(folder2);
-
             wb = Workbook.createWorkbook(file2, workbook);
 
             Sheet sheet = workbook.getSheet(0);
@@ -211,15 +193,14 @@ public class Main2Activity extends AppCompatActivity {
 
             WritableSheet plan1 = wb.getSheet(0);
 
-
-            Label nome = new Label(0, j, p.getNome());
-            Label idade = new Label(1, j, p.getIdade() + "");
-            Label teste1 = new Label(2, j, p.getTest1() + "");
-            Label teste2 = new Label(3, j, p.getTest2() + "");
-            Label teste3 = new Label(4, j, p.getTest3() + "");
-            Label teste4 = new Label(5, j, p.getTest4() + "");
-            Label teste5 = new Label(6, j, p.getTest5() + "");
-            Label resultado = new Label(7, j, p.getResultado());
+            Label nome = new Label(0, j, c.getNome() + "");
+            Label idade = new Label(1, j, c.getIdade() + "");
+            Label teste1 = new Label(2, j, c.getC10M() + "");
+            Label teste2 = new Label(3, j, c.getLPS() + "");
+            Label teste3 = new Label(4, j, c.getLPDV() + "");
+            Label teste4 = new Label(5, j, c.getVTC() + "");
+            Label teste5 = new Label(6, j, c.getLCLC() + "");
+            Label resultado = new Label(7, j, c.getMsg());
 
 
             plan1.addCell(nome);
@@ -231,17 +212,8 @@ public class Main2Activity extends AppCompatActivity {
             plan1.addCell(teste5);
             plan1.addCell(resultado);
 
-            wb.write();
-            wb.close();
-
-
-
-
-
-
-
-
-
+            wb.write(); //grava
+            wb.close(); //fecha
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -253,9 +225,6 @@ public class Main2Activity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
     }
-
-
 
 }
