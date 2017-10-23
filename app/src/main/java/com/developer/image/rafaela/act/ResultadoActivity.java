@@ -93,8 +93,16 @@ public class ResultadoActivity extends AppCompatActivity {
 
                     c.setNome(nome.getText().toString()); //seta o nome digitado
                     c.setIdade(Integer.valueOf(idade.getText().toString())); //seta idade digitada
+
+                    // chama os metodos de calcular os indices
+                    c.calcularC10M();
+                    c.calcularLPS();
+                    c.calcularLPDV();
+                    c.calcularVTC();
+                    c.calcularLCLC();
                     c.calcularIG(); //calcula o IG
-                    resultado.setText(c.getResultadoIG()); //seta msg de resultado no textView
+
+                    resultado.setText(c.getResultadoGeral()); //seta msg de resultado no textView
                     InserirTabela(); //insere o resultado na tabela
 
                 }
@@ -137,14 +145,15 @@ public class ResultadoActivity extends AppCompatActivity {
         WritableSheet plan = wb.getSheet(0);
 
         //cria celula por celula e insere os valores
-        Label label1 = new Label(0,0,"NOME");
-        Label label2 = new Label(1,0,"IDADE");
+        Label label1 = new Label(0, 0, "Nome:");
+        Label label2 = new Label(1, 0, "Idade:");
         Label label3 = new Label(2,0,"C10M(ms)");
         Label label4 = new Label(3,0,"LPS(ms)");
         Label label5 = new Label(4,0,"LPDV(ms)");
         Label label6 = new Label(5,0,"VTC(ms)");
         Label label7 = new Label(6,0,"LCLC(ms)");
-        Label label8 = new Label(7,0,"RESULTADO+IG");
+        Label label8 = new Label(7, 0, "IG(score)");
+        Label label9 = new Label(8, 0, " - "); //celula para indicar o final
 
         // Como o método pode levantar exceção '
         // iremos coloca-lo dentro de um try/catch
@@ -159,6 +168,7 @@ public class ResultadoActivity extends AppCompatActivity {
             plan.addCell(label6);
             plan.addCell(label7);
             plan.addCell(label8);
+            plan.addCell(label9);
 
             wb.write(); //escreve
             wb.close(); //e fecha o arquivo
@@ -193,14 +203,15 @@ public class ResultadoActivity extends AppCompatActivity {
 
             WritableSheet plan1 = wb.getSheet(0);
 
-            Label nome = new Label(0, j, c.getNome() + "");
-            Label idade = new Label(1, j, c.getIdade() + "");
-            Label teste1 = new Label(2, j, c.getC10M() + "");
-            Label teste2 = new Label(3, j, c.getLPS() + "");
-            Label teste3 = new Label(4, j, c.getLPDV() + "");
-            Label teste4 = new Label(5, j, c.getVTC() + "");
-            Label teste5 = new Label(6, j, c.getLCLC() + "");
-            Label resultado = new Label(7, j, c.getResultadoIG());
+            Label nome = new Label(0, j, c.getNome() + " ");
+            Label idade = new Label(1, j, c.getIdade() + " ");
+            Label teste1 = new Label(2, j, c.getC10M() + " " + c.getResultadoC10M());
+            Label teste2 = new Label(3, j, c.getLPS() + " " + c.getResultadoLPS());
+            Label teste3 = new Label(4, j, c.getLPDV() + " " + c.getResultadoLPDV());
+            Label teste4 = new Label(5, j, c.getVTC() + " " + c.getResultadoVTC());
+            Label teste5 = new Label(6, j, c.getLCLC() + " " + c.getResultadoLCLC());
+            Label resultado = new Label(7, j, c.getIG() + " " + c.getResultadoIG());
+            Label label9 = new Label(8, j, " - ");
 
 
             plan1.addCell(nome);
@@ -211,6 +222,7 @@ public class ResultadoActivity extends AppCompatActivity {
             plan1.addCell(teste4);
             plan1.addCell(teste5);
             plan1.addCell(resultado);
+            plan1.addCell(label9);
 
             wb.write(); //grava
             wb.close(); //fecha

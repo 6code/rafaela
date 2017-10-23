@@ -48,7 +48,7 @@
     <TextView
         android:id="@+id/resultado"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_alignEnd="@+id/nome"
         android:layout_alignLeft="@+id/verificar"
         android:layout_alignRight="@+id/nome"
@@ -58,7 +58,7 @@
         android:background="@color/cor"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <EditText
@@ -118,10 +118,10 @@
         android:id="@+id/novoteste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textView17"
         android:layout_alignLeft="@+id/resultado"
         android:layout_alignStart="@+id/resultado"
-        android:layout_below="@+id/resultado"
-        android:layout_marginTop="34dp"
+        android:layout_marginBottom="14dp"
         android:text="NOVO TESTE  ?"
         android:textAllCaps="true"
         android:textStyle="bold" />

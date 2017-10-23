@@ -2,6 +2,7 @@ package com.developer.image.rafaela.model;
 
 public class CalculaIndices {
 
+    private String resultadoGeral;
     private String resultadoC10M;
     private String resultadoLPS;
     private String resultadoLPDV;
@@ -60,6 +61,18 @@ public class CalculaIndices {
 
     public void setResultadoVTC(String resultadoVTC) {
         this.resultadoVTC = resultadoVTC;
+    }
+
+    public String getResultadoGeral() {
+
+        this.resultadoGeral = "\t\t\t Resultados:" + "\nC10M: " + resultadoC10M
+                + "\nLPS: " + resultadoLPS
+                + "\nLPDV: " + resultadoLPDV
+                + "\nVTC: " + resultadoVTC
+                + "\nLCLC: " + resultadoLCLC
+                + "\nIG: " + resultadoIG;
+
+        return this.resultadoGeral;
     }
 
     public String getResultadoLCLC() {
@@ -142,24 +155,29 @@ public class CalculaIndices {
         this.IG = IG;
     }
 
-    public void calcularC10M(int idade) {
+    public void calcularC10M() {
 
+        this.resultadoC10M = "Teste da classe";
     }
 
-    public void calcularLPS(int idade) {
+    public void calcularLPS() {
 
+        this.resultadoLPS = "Teste da classe";
     }
 
-    public void calcularLPDV(int idade) {
+    public void calcularLPDV() {
 
+        this.resultadoLPDV = "Teste da classe";
     }
 
-    public void calcularVTC(int idade) {
+    public void calcularVTC() {
 
+        this.resultadoVTC = "Teste da classe";
     }
 
-    public void calcularLCLC(int idade) {
+    public void calcularLCLC() {
 
+        this.resultadoLCLC = "Teste da classe";
     }
 
     public void calcularIG() {
@@ -176,19 +194,19 @@ public class CalculaIndices {
 
             if (this.IG < 22280) {
 
-                this.resultadoIG = "MUITO BOM";
+                this.resultadoIG = "Muito bom";
 
             } else if (this.IG > 22208 && this.IG < 27430) {
 
-                this.resultadoIG = "BOM";
+                this.resultadoIG = "Bom";
 
             } else if (this.IG > 27440 && this.IG < 33010) {
 
-                this.resultadoIG = "REGULAR";
+                this.resultadoIG = "Regular";
 
             } else if (this.IG < 33010) {
 
-                this.resultadoIG = "INSUFICIENTE";
+                this.resultadoIG = "Insuficiente";
 
             }
 
@@ -198,19 +216,19 @@ public class CalculaIndices {
 
             if (this.IG < 22820) {
 
-                this.resultadoIG = "MUITO BOM";
+                this.resultadoIG = "Muito bom";
 
             } else if (this.IG > 22820 && this.IG < 28100) {
 
-                this.resultadoIG = "BOM";
+                this.resultadoIG = "bom";
 
             } else if (this.IG > 28110 && this.IG < 33710) {
 
-                this.resultadoIG = "REGULAR";
+                this.resultadoIG = "Regular";
 
             } else if (this.IG < 33710) {
 
-                this.resultadoIG = "INSUFICIENTE";
+                this.resultadoIG = "Insufuciente";
 
             }
 
@@ -220,19 +238,19 @@ public class CalculaIndices {
 
             if (this.IG < 23370) {
 
-                this.resultadoIG = "MUITO BOM";
+                this.resultadoIG = "Muito bom";
 
             } else if (this.IG > 23370 && this.IG < 28770) {
 
-                this.resultadoIG = "BOM";
+                this.resultadoIG = "Bom";
 
             } else if (this.IG > 20770 && this.IG < 34410) {
 
-                this.resultadoIG = "REGULAR";
+                this.resultadoIG = "Regular";
 
             } else if (this.IG < 34410) {
 
-                this.resultadoIG = "INSUFICIENTE";
+                this.resultadoIG = "Insuficiente";
 
             }
 
@@ -241,19 +259,19 @@ public class CalculaIndices {
 
             if (this.IG < 23910) {
 
-                this.resultadoIG = "MUITO BOM";
+                this.resultadoIG = "Muito bom";
 
             } else if (this.IG > 23910 && this.IG < 29450) {
 
-                this.resultadoIG = "BOM";
+                this.resultadoIG = "Bom";
 
             } else if (this.IG > 29460 && this.IG < 35110) {
 
-                this.resultadoIG = "REGULAR";
+                this.resultadoIG = "Regular";
 
             } else if (this.IG < 35110) {
 
-                this.resultadoIG = "INSUFICIENTE";
+                this.resultadoIG = "Insuficiente";
 
             }
 
@@ -263,19 +281,19 @@ public class CalculaIndices {
 
             if (this.IG < 24460) {
 
-                this.resultadoIG = "MUITO BOM";
+                this.resultadoIG = "Muito bom";
 
             } else if (this.IG > 24460 && this.IG < 30120) {
 
-                this.resultadoIG = "BOM";
+                this.resultadoIG = "Bom";
 
             } else if (this.IG > 30130 && this.IG < 35810) {
 
-                this.resultadoIG = "REGULAR";
+                this.resultadoIG = "Regular";
 
             } else if (this.IG < 35810) {
 
-                this.resultadoIG = "INSUFICIENTE";
+                this.resultadoIG = "Insuficente";
 
             }
 
