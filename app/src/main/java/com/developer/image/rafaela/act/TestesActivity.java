@@ -3,11 +3,11 @@ package com.developer.image.rafaela.act;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -15,7 +15,7 @@ import android.widget.ImageButton;
 
 import com.developer.image.rafaela.R;
 
-public class MainActivity extends AppCompatActivity {
+public class TestesActivity extends AppCompatActivity {
 
     private ImageButton s1;
     private ImageButton s2;
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(TestesActivity.this, ResultadoActivity.class);
 
                 Bundle bundle = new Bundle();
 
@@ -352,7 +352,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = new Intent(TestesActivity.this, TestesActivity.class);
                 startActivity(intent);
                 finish();
 

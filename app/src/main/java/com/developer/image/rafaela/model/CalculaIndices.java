@@ -2,7 +2,12 @@ package com.developer.image.rafaela.model;
 
 public class CalculaIndices {
 
-    private String msg;
+    private String resultadoC10M;
+    private String resultadoLPS;
+    private String resultadoLPDV;
+    private String resultadoVTC;
+    private String resultadoLCLC;
+    private String resultadoIG;
     private String nome;
     private Integer idade;
 
@@ -25,12 +30,52 @@ public class CalculaIndices {
     }
 
 
-    public String getMsg() {
-        return msg;
+    public String getResultadoC10M() {
+        return resultadoC10M;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setResultadoC10M(String resultadoC10M) {
+        this.resultadoC10M = resultadoC10M;
+    }
+
+    public String getResultadoLPS() {
+        return resultadoLPS;
+    }
+
+    public void setResultadoLPS(String resultadoLPS) {
+        this.resultadoLPS = resultadoLPS;
+    }
+
+    public String getResultadoLPDV() {
+        return resultadoLPDV;
+    }
+
+    public void setResultadoLPDV(String resultadoLPDV) {
+        this.resultadoLPDV = resultadoLPDV;
+    }
+
+    public String getResultadoVTC() {
+        return resultadoVTC;
+    }
+
+    public void setResultadoVTC(String resultadoVTC) {
+        this.resultadoVTC = resultadoVTC;
+    }
+
+    public String getResultadoLCLC() {
+        return resultadoLCLC;
+    }
+
+    public void setResultadoLCLC(String resultadoLCLC) {
+        this.resultadoLCLC = resultadoLCLC;
+    }
+
+    public String getResultadoIG() {
+        return resultadoIG;
+    }
+
+    public void setResultadoIG(String resultadoIG) {
+        this.resultadoIG = resultadoIG;
     }
 
     public String getNome() {
@@ -50,29 +95,52 @@ public class CalculaIndices {
     }
 
     public long getC10M() {
-        return this.C10M;
+        return C10M;
+    }
+
+    public void setC10M(long c10M) {
+        C10M = c10M;
     }
 
     public long getLPS() {
-        return this.LPS;
+        return LPS;
+    }
+
+    public void setLPS(long LPS) {
+        this.LPS = LPS;
     }
 
     public long getLPDV() {
-        return this.LPDV;
+        return LPDV;
+    }
+
+    public void setLPDV(long LPDV) {
+        this.LPDV = LPDV;
     }
 
     public long getVTC() {
-        return this.VTC;
+        return VTC;
+    }
+
+    public void setVTC(long VTC) {
+        this.VTC = VTC;
     }
 
     public long getLCLC() {
-        return this.LCLC;
+        return LCLC;
+    }
+
+    public void setLCLC(long LCLC) {
+        this.LCLC = LCLC;
     }
 
     public long getIG() {
-        return this.IG;
+        return IG;
     }
 
+    public void setIG(long IG) {
+        this.IG = IG;
+    }
 
     public void calcularC10M(int idade) {
 
@@ -101,26 +169,26 @@ public class CalculaIndices {
 
         if (this.idade >= 50 && this.idade <= 59) {
 
-            this.msg = "";
+            this.resultadoIG = "";
 
 
         } else if (this.idade >= 60 && this.idade <= 64) {
 
             if (this.IG < 22280) {
 
-                this.msg = "MUITO BOM";
+                this.resultadoIG = "MUITO BOM";
 
             } else if (this.IG > 22208 && this.IG < 27430) {
 
-                this.msg = "BOM";
+                this.resultadoIG = "BOM";
 
             } else if (this.IG > 27440 && this.IG < 33010) {
 
-                this.msg = "REGULAR";
+                this.resultadoIG = "REGULAR";
 
             } else if (this.IG < 33010) {
 
-                this.msg = "INSUFICIENTE";
+                this.resultadoIG = "INSUFICIENTE";
 
             }
 
@@ -130,19 +198,19 @@ public class CalculaIndices {
 
             if (this.IG < 22820) {
 
-                this.msg = "MUITO BOM";
+                this.resultadoIG = "MUITO BOM";
 
             } else if (this.IG > 22820 && this.IG < 28100) {
 
-                this.msg = "BOM";
+                this.resultadoIG = "BOM";
 
             } else if (this.IG > 28110 && this.IG < 33710) {
 
-                this.msg = "REGULAR";
+                this.resultadoIG = "REGULAR";
 
             } else if (this.IG < 33710) {
 
-                this.msg = "INSUFICIENTE";
+                this.resultadoIG = "INSUFICIENTE";
 
             }
 
@@ -152,19 +220,19 @@ public class CalculaIndices {
 
             if (this.IG < 23370) {
 
-                this.msg = "MUITO BOM";
+                this.resultadoIG = "MUITO BOM";
 
             } else if (this.IG > 23370 && this.IG < 28770) {
 
-                this.msg = "BOM";
+                this.resultadoIG = "BOM";
 
             } else if (this.IG > 20770 && this.IG < 34410) {
 
-                this.msg = "REGULAR";
+                this.resultadoIG = "REGULAR";
 
             } else if (this.IG < 34410) {
 
-                this.msg = "INSUFICIENTE";
+                this.resultadoIG = "INSUFICIENTE";
 
             }
 
@@ -173,19 +241,19 @@ public class CalculaIndices {
 
             if (this.IG < 23910) {
 
-                this.msg = "MUITO BOM";
+                this.resultadoIG = "MUITO BOM";
 
             } else if (this.IG > 23910 && this.IG < 29450) {
 
-                this.msg = "BOM";
+                this.resultadoIG = "BOM";
 
             } else if (this.IG > 29460 && this.IG < 35110) {
 
-                this.msg = "REGULAR";
+                this.resultadoIG = "REGULAR";
 
             } else if (this.IG < 35110) {
 
-                this.msg = "INSUFICIENTE";
+                this.resultadoIG = "INSUFICIENTE";
 
             }
 
@@ -195,19 +263,19 @@ public class CalculaIndices {
 
             if (this.IG < 24460) {
 
-                this.msg = "MUITO BOM";
+                this.resultadoIG = "MUITO BOM";
 
             } else if (this.IG > 24460 && this.IG < 30120) {
 
-                this.msg = "BOM";
+                this.resultadoIG = "BOM";
 
             } else if (this.IG > 30130 && this.IG < 35810) {
 
-                this.msg = "REGULAR";
+                this.resultadoIG = "REGULAR";
 
             } else if (this.IG < 35810) {
 
-                this.msg = "INSUFICIENTE";
+                this.resultadoIG = "INSUFICIENTE";
 
             }
 

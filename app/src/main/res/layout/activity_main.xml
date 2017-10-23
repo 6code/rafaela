@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eceff1"
-    tools:context="com.developer.image.rafaela.act.MainActivity">
+    tools:context="com.developer.image.rafaela.act.TestesActivity">
 
     <ImageButton
         android:id="@+id/p4"
@@ -51,12 +51,12 @@
         android:id="@+id/s1"
         android:layout_width="60dp"
         android:layout_height="40dp"
-        android:background="@color/colorPrimaryDark"
-        app:srcCompat="@android:drawable/ic_media_play"
-        android:layout_alignTop="@+id/textView6"
         android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
-        android:layout_marginTop="30dp" />
+        android:layout_alignTop="@+id/textView6"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryDark"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
         android:id="@+id/p1"
@@ -105,58 +105,58 @@
         android:id="@+id/s2"
         android:layout_width="60dp"
         android:layout_height="40dp"
-        android:background="@color/colorPrimaryDark"
-        app:srcCompat="@android:drawable/ic_media_play"
         android:layout_below="@+id/s1"
+        android:layout_marginTop="15dp"
         android:layout_toLeftOf="@+id/p3"
         android:layout_toStartOf="@+id/p3"
-        android:layout_marginTop="15dp" />
+        android:background="@color/colorPrimaryDark"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <Chronometer
         android:id="@+id/c1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:visibility="visible"
         android:layout_alignBottom="@+id/p1"
+        android:layout_toEndOf="@+id/textView8"
         android:layout_toRightOf="@+id/textView8"
-        android:layout_toEndOf="@+id/textView8" />
+        android:textSize="30sp"
+        android:visibility="visible" />
 
     <Chronometer
         android:id="@+id/c2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_alignBottom="@+id/p2"
         android:layout_alignLeft="@+id/c1"
-        android:layout_alignStart="@+id/c1" />
+        android:layout_alignStart="@+id/c1"
+        android:textSize="30sp" />
 
     <Chronometer
         android:id="@+id/c3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_alignBottom="@+id/p3"
         android:layout_alignLeft="@+id/c2"
-        android:layout_alignStart="@+id/c2" />
+        android:layout_alignStart="@+id/c2"
+        android:textSize="30sp" />
 
     <Chronometer
         android:id="@+id/c4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_alignBottom="@+id/p4"
         android:layout_alignLeft="@+id/c3"
-        android:layout_alignStart="@+id/c3" />
+        android:layout_alignStart="@+id/c3"
+        android:textSize="30sp" />
 
     <Chronometer
         android:id="@+id/c5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_alignBottom="@+id/p5"
         android:layout_alignLeft="@+id/c4"
-        android:layout_alignStart="@+id/c4" />
+        android:layout_alignStart="@+id/c4"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView"
@@ -224,15 +224,15 @@
         android:id="@+id/indice"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/reiniciar"
+        android:layout_marginTop="14dp"
         android:background="@color/colorPrimary"
         android:text="Gerar índice"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/reiniciar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="14dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView8"
@@ -249,16 +249,16 @@
         android:id="@+id/reiniciar"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_alignEnd="@+id/p5"
+        android:layout_alignLeft="@+id/s5"
+        android:layout_alignRight="@+id/p5"
+        android:layout_alignStart="@+id/s5"
+        android:layout_below="@+id/p5"
+        android:layout_marginTop="17dp"
         android:background="#00bfa5"
         android:text="Reiniciar"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        android:layout_below="@+id/p5"
-        android:layout_alignLeft="@+id/s5"
-        android:layout_alignStart="@+id/s5"
-        android:layout_marginTop="17dp"
-        android:layout_alignRight="@+id/p5"
-        android:layout_alignEnd="@+id/p5" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView6"

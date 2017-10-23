@@ -25,7 +25,7 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
-public class Main2Activity extends AppCompatActivity {
+public class ResultadoActivity extends AppCompatActivity {
 
 
     private TextView novoTest;
@@ -87,14 +87,14 @@ public class Main2Activity extends AppCompatActivity {
                 //verifica se os campos estão vazios antes de chamar os metodos
                 if(nome.getText().toString().equals("") && idade.getText().toString().equals("")) {
 
-                    Toast.makeText(Main2Activity.this, "Preencha todos os campos!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ResultadoActivity.this, "Preencha todos os campos!!", Toast.LENGTH_LONG).show();
 
                 }else{
 
                     c.setNome(nome.getText().toString()); //seta o nome digitado
                     c.setIdade(Integer.valueOf(idade.getText().toString())); //seta idade digitada
                     c.calcularIG(); //calcula o IG
-                    resultado.setText(c.getMsg()); //seta msg de resultado no textView
+                    resultado.setText(c.getResultadoIG()); //seta msg de resultado no textView
                     InserirTabela(); //insere o resultado na tabela
 
                 }
@@ -107,7 +107,7 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                Intent intent = new Intent(ResultadoActivity.this, TestesActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -200,7 +200,7 @@ public class Main2Activity extends AppCompatActivity {
             Label teste3 = new Label(4, j, c.getLPDV() + "");
             Label teste4 = new Label(5, j, c.getVTC() + "");
             Label teste5 = new Label(6, j, c.getLCLC() + "");
-            Label resultado = new Label(7, j, c.getMsg());
+            Label resultado = new Label(7, j, c.getResultadoIG());
 
 
             plan1.addCell(nome);
