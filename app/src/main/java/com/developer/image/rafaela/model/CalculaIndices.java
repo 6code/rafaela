@@ -23,7 +23,7 @@ public class CalculaIndices {
 
     public CalculaIndices(long c10M, long LPS, long LPDV, long VTC, long LCLC) {
 
-        C10M = c10M;
+        this.C10M = c10M;
         this.LPS = LPS;
         this.LPDV = LPDV;
         this.VTC = VTC;
@@ -155,30 +155,633 @@ public class CalculaIndices {
         this.IG = IG;
     }
 
+
     public void calcularC10M() {
 
-        this.resultadoC10M = "Teste da classe";
+//50-59 -------------------------------------------------------------
+        if (this.idade >= 50 && this.idade <= 59) {
+
+            this.resultadoC10M = "";
+
+//60-64 -------------------------------------------------------------
+        } else if (this.idade >= 60 && this.idade <= 64) {
+
+            if (this.C10M < 5520) {
+
+                this.resultadoC10M = "Muito bom";
+
+            } else if (this.C10M > 5520 && this.C10M < 7040) {
+
+                this.resultadoC10M = "Bom";
+
+            } else if (this.C10M > 7050 && this.C10M < 8920) {
+
+                this.resultadoC10M = "Regular";
+
+            } else if (this.C10M > 8920) {
+
+                this.resultadoC10M = "Insuficiente";
+
+            }
+//65-69 -------------------------------------------------------------
+
+        } else if (this.idade >= 65 && this.idade <= 69) {
+
+
+            if (this.C10M < 5670) {
+
+                this.resultadoC10M = "Muito bom";
+
+            } else if (this.C10M > 5670 && this.C10M < 7210) {
+
+                this.resultadoC10M = "bom";
+
+            } else if (this.C10M > 7220 && this.C10M < 9040) {
+
+                this.resultadoC10M = "Regular";
+
+            } else if (this.C10M > 9040) {
+
+                this.resultadoC10M = "Insufuciente";
+
+            }
+//70-74 -------------------------------------------------------------
+
+        } else if (this.idade >= 70 && this.idade <= 74) {
+
+
+            if (this.C10M < 5830) {
+
+                this.resultadoC10M = "Muito bom";
+
+            } else if (this.C10M > 5830 && this.C10M < 7380) {
+
+                this.resultadoC10M = "Bom";
+
+            } else if (this.C10M > 7390 && this.C10M < 9040) {
+
+                this.resultadoC10M = "Regular";
+
+            } else if (this.C10M > 9040) {
+
+                this.resultadoC10M = "Insuficiente";
+
+            }
+//75-79 -------------------------------------------------------------
+
+        } else if (this.idade >= 75 && this.idade <= 79) {
+
+            if (this.C10M < 5980) {
+
+                this.resultadoC10M = "Muito bom";
+
+            } else if (this.C10M > 5970 && this.C10M < 7560) {
+
+                this.resultadoC10M = "Bom";
+
+            } else if (this.C10M > 7570 && this.C10M < 9280) {
+
+                this.resultadoC10M = "Regular";
+
+            } else if (this.C10M > 9280) {
+
+                this.resultadoC10M = "Insuficiente";
+
+            }
+//>80 -------------------------------------------------------------
+
+        } else if (this.idade >= 80) {
+
+
+            if (this.C10M < 6140) {
+
+                this.resultadoC10M = "Muito bom";
+
+            } else if (this.C10M > 6140 && this.C10M < 7730) {
+
+                this.resultadoC10M = "Bom";
+
+            } else if (this.C10M > 7740 && this.C10M < 9400) {
+
+                this.resultadoC10M = "Regular";
+
+            } else if (this.C10M > 9400) {
+
+                this.resultadoC10M = "Insuficente";
+
+            }
+        }
+
     }
+
+
+    /***********************************************************************************/
+
 
     public void calcularLPS() {
 
-        this.resultadoLPS = "Teste da classe";
+
+//50-59 -------------------------------------------------------------
+        if (this.idade >= 50 && this.idade <= 59) {
+
+            this.resultadoLPS = "";
+
+//60-64 -------------------------------------------------------------
+        } else if (this.idade >= 60 && this.idade <= 64) {
+
+            if (this.LPS < 6840) {
+
+                this.resultadoLPS = "Muito bom";
+
+            } else if (this.LPS > 6840 && this.LPS < 10120) {
+
+                this.resultadoLPS = "Bom";
+
+            } else if (this.LPS > 10130 && this.LPS < 13620) {
+
+                this.resultadoLPS = "Regular";
+
+            } else if (this.LPS > 13620) {
+
+                this.resultadoLPS = "Insuficiente";
+
+            }
+//65-69 -------------------------------------------------------------
+
+        } else if (this.idade >= 65 && this.idade <= 69) {
+
+
+            if (this.LPS < 6910) {
+
+                this.resultadoLPS = "Muito bom";
+
+            } else if (this.LPS > 6910 && this.LPS < 10190) {
+
+                this.resultadoLPS = "bom";
+
+            } else if (this.LPS > 10200 && this.LPS < 13720) {
+
+                this.resultadoLPS = "Regular";
+
+            } else if (this.LPS > 13720) {
+
+                this.resultadoLPS = "Insufuciente";
+
+            }
+//70-74 -------------------------------------------------------------
+
+        } else if (this.idade >= 70 && this.idade <= 74) {
+
+
+            if (this.LPS < 6970) {
+
+                this.resultadoLPS = "Muito bom";
+
+            } else if (this.LPS > 6970 && this.LPS < 10260) {
+
+                this.resultadoLPS = "Bom";
+
+            } else if (this.LPS > 10270 && this.LPS < 13810) {
+
+                this.resultadoLPS = "Regular";
+
+            } else if (this.LPS > 13810) {
+
+                this.resultadoLPS = "Insuficiente";
+
+            }
+//75-79 -------------------------------------------------------------
+
+        } else if (this.idade >= 75 && this.idade <= 79) {
+
+            if (this.LPS < 7040) {
+
+                this.resultadoLPS = "Muito bom";
+
+            } else if (this.LPS > 7040 && this.LPS < 10330) {
+
+                this.resultadoLPS = "Bom";
+
+            } else if (this.LPS > 10340 && this.LPS < 13910) {
+
+                this.resultadoLPS = "Regular";
+
+            } else if (this.LPS > 13910) {
+
+                this.resultadoLPS = "Insuficiente";
+
+            }
+//>80 -------------------------------------------------------------
+
+        } else if (this.idade >= 80) {
+
+
+            if (this.LPS < 7110) {
+
+                this.resultadoLPS = "Muito bom";
+
+            } else if (this.LPS > 7110 && this.LPS < 10400) {
+
+                this.resultadoLPS = "Bom";
+
+            } else if (this.LPS > 10410 && this.LPS < 14010) {
+
+                this.resultadoLPS = "Regular";
+
+            } else if (this.LPS > 14010) {
+
+                this.resultadoLPS = "Insuficente";
+
+            }
+
+
+        }
     }
+
+
+    /***********************************************************************************/
+
+
 
     public void calcularLPDV() {
 
-        this.resultadoLPDV = "Teste da classe";
+
+//50-59 -------------------------------------------------------------
+        if (this.idade >= 50 && this.idade <= 59) {
+
+            this.resultadoLPDV = "";
+
+//60-64 -------------------------------------------------------------
+        } else if (this.idade >= 60 && this.idade <= 64) {
+
+            if (this.LPDV < 2300) {
+
+                this.resultadoLPDV = "Muito bom";
+
+            } else if (this.LPDV > 2300 && this.LPDV < 3520) {
+
+                this.resultadoLPDV = "Bom";
+
+            } else if (this.LPDV > 3530 && this.LPDV < 5410) {
+
+                this.resultadoLPDV = "Regular";
+
+            } else if (this.LPDV > 5410) {
+
+                this.resultadoLPDV = "Insuficiente";
+
+            }
+//65-69 -------------------------------------------------------------
+
+        } else if (this.idade >= 65 && this.idade <= 69) {
+
+
+            if (this.LPDV < 2470) {
+
+                this.resultadoLPDV = "Muito bom";
+
+            } else if (this.LPDV > 2047 && this.LPDV < 3810) {
+
+                this.resultadoLPDV = "bom";
+
+            } else if (this.LPDV > 3820 && this.LPDV < 5800) {
+
+                this.resultadoLPDV = "Regular";
+
+            } else if (this.LPDV > 5800) {
+
+                this.resultadoLPDV = "Insufuciente";
+
+            }
+//70-74 -------------------------------------------------------------
+
+        } else if (this.idade >= 70 && this.idade <= 74) {
+
+
+            if (this.LPDV < 2630) {
+
+                this.resultadoLPDV = "Muito bom";
+
+            } else if (this.LPDV > 2630 && this.LPDV < 4110) {
+
+                this.resultadoLPDV = "Bom";
+
+            } else if (this.LPDV > 4120 && this.LPDV < 6200) {
+
+                this.resultadoLPDV = "Regular";
+
+            } else if (this.LPDV > 6200) {
+
+                this.resultadoLPDV = "Insuficiente";
+
+            }
+//75-79 -------------------------------------------------------------
+
+        } else if (this.idade >= 75 && this.idade <= 79) {
+
+            if (this.LPDV < 2800) {
+
+                this.resultadoLPDV = "Muito bom";
+
+            } else if (this.LPDV > 2800 && this.LPDV < 4400) {
+
+                this.resultadoLPDV = "Bom";
+
+            } else if (this.LPDV > 4410 && this.LPDV < 6600) {
+
+                this.resultadoLPDV = "Regular";
+
+            } else if (this.LPDV > 6600) {
+
+                this.resultadoLPDV = "Insuficiente";
+
+            }
+//>80 -------------------------------------------------------------
+
+        } else if (this.idade >= 80) {
+
+
+            if (this.LPDV < 2960) {
+
+                this.resultadoLPDV = "Muito bom";
+
+            } else if (this.LPDV > 2960 && this.LPDV < 4700) {
+
+                this.resultadoLPDV = "Bom";
+
+            } else if (this.LPDV > 4710 && this.LPDV < 6990) {
+
+                this.resultadoLPDV = "Regular";
+
+            } else if (this.LPDV > 6990) {
+
+                this.resultadoLPDV = "Insuficente";
+
+            }
+
+
+        }
+
     }
+
+
+    /***********************************************************************************/
+
+
+
+
 
     public void calcularVTC() {
 
-        this.resultadoVTC = "Teste da classe";
+//50-59 -------------------------------------------------------------
+        if (this.idade >= 50 && this.idade <= 59) {
+
+            this.resultadoVTC = "";
+
+//60-64 -------------------------------------------------------------
+        } else if (this.idade >= 60 && this.idade <= 64) {
+
+            if (this.VTC < 8220) {
+
+                this.resultadoVTC = "Muito bom";
+
+            } else if (this.VTC > 8220 && this.VTC < 11450) {
+
+                this.resultadoVTC = "Bom";
+
+            } else if (this.VTC > 11460 && this.VTC < 15510) {
+
+                this.resultadoVTC = "Regular";
+
+            } else if (this.VTC > 15510) {
+
+                this.resultadoVTC = "Insuficiente";
+
+            }
+//65-69 -------------------------------------------------------------
+
+        } else if (this.idade >= 65 && this.idade <= 69) {
+
+
+            if (this.VTC < 875) {
+
+                this.resultadoVTC = "Muito bom";
+
+            } else if (this.VTC > 8750 && this.VTC < 12000) {
+
+                this.resultadoVTC = "bom";
+
+            } else if (this.VTC > 12100 && this.VTC < 16040) {
+
+                this.resultadoVTC = "Regular";
+
+            } else if (this.VTC > 16040) {
+
+                this.resultadoVTC = "Insufuciente";
+
+            }
+//70-74 -------------------------------------------------------------
+
+        } else if (this.idade >= 70 && this.idade <= 74) {
+
+
+            if (this.VTC < 9290) {
+
+                this.resultadoVTC = "Muito bom";
+
+            } else if (this.VTC > 9290 && this.VTC < 12540) {
+
+                this.resultadoVTC = "Bom";
+
+            } else if (this.VTC > 12550 && this.VTC < 16560) {
+
+                this.resultadoVTC = "Regular";
+
+            } else if (this.VTC > 16560) {
+
+                this.resultadoVTC = "Insuficiente";
+
+            }
+//75-79 -------------------------------------------------------------
+
+        } else if (this.idade >= 75 && this.idade <= 79) {
+
+            if (this.VTC < 9830) {
+
+                this.resultadoVTC = "Muito bom";
+
+            } else if (this.VTC > 9830 && this.VTC < 12080) {
+
+                this.resultadoVTC = "Bom";
+
+            } else if (this.VTC > 13090 && this.VTC < 17080) {
+
+                this.resultadoVTC = "Regular";
+
+            } else if (this.VTC > 17080) {
+
+                this.resultadoVTC = "Insuficiente";
+
+            }
+//>80 -------------------------------------------------------------
+
+        } else if (this.idade >= 80) {
+
+
+            if (this.VTC < 10360) {
+
+                this.resultadoVTC = "Muito bom";
+
+            } else if (this.VTC > 10360 && this.VTC < 13630) {
+
+                this.resultadoVTC = "Bom";
+
+            } else if (this.VTC > 13640 && this.VTC < 17600) {
+
+                this.resultadoVTC = "Regular";
+
+            } else if (this.VTC > 17600) {
+
+                this.resultadoVTC = "Insuficente";
+
+            }
+
+
+        }
     }
+
+
+    /***********************************************************************************/
+
+
+
+
 
     public void calcularLCLC() {
 
-        this.resultadoLCLC = "Teste da classe";
+
+//50-59 -------------------------------------------------------------
+        if (this.idade >= 50 && this.idade <= 59) {
+
+            this.resultadoLCLC = "";
+
+//60-64 -------------------------------------------------------------
+        } else if (this.idade >= 60 && this.idade <= 64) {
+
+            if (this.LCLC < 35170) {
+
+                this.resultadoLCLC = "Muito bom";
+
+            } else if (this.LCLC > 35170 && this.LCLC < 42370) {
+
+                this.resultadoLCLC = "Bom";
+
+            } else if (this.LCLC > 42380 && this.LCLC < 49680) {
+
+                this.resultadoLCLC = "Regular";
+
+            } else if (this.LCLC > 49680) {
+
+                this.resultadoLCLC = "Insuficiente";
+
+            }
+//65-69 -------------------------------------------------------------
+
+        } else if (this.idade >= 65 && this.idade <= 69) {
+
+
+            if (this.LCLC < 35960) {
+
+                this.resultadoLCLC = "Muito bom";
+
+            } else if (this.LCLC > 35960 && this.LCLC < 43280) {
+
+                this.resultadoLCLC = "bom";
+
+            } else if (this.LCLC > 43290 && this.LCLC < 50810) {
+
+                this.resultadoLCLC = "Regular";
+
+            } else if (this.LCLC > 50810) {
+
+                this.resultadoLCLC = "Insufuciente";
+
+            }
+//70-74 -------------------------------------------------------------
+
+        } else if (this.idade >= 70 && this.idade <= 74) {
+
+
+            if (this.C10M < 36760) {
+
+                this.resultadoLCLC = "Muito bom";
+
+            } else if (this.LCLC > 367660 && this.LCLC < 44190) {
+
+                this.resultadoLCLC = "Bom";
+
+            } else if (this.LCLC > 44200 && this.LCLC < 51940) {
+
+                this.resultadoLCLC = "Regular";
+
+            } else if (this.LCLC > 51940) {
+
+                this.resultadoLCLC = "Insuficiente";
+
+            }
+//75-79 -------------------------------------------------------------
+
+        } else if (this.idade >= 75 && this.idade <= 79) {
+
+            if (this.LCLC < 37550) {
+
+                this.resultadoLCLC = "Muito bom";
+
+            } else if (this.LCLC > 37550 && this.LCLC < 45110) {
+
+                this.resultadoLCLC = "Bom";
+
+            } else if (this.LCLC > 45120 && this.LCLC < 53060) {
+
+                this.resultadoLCLC = "Regular";
+
+            } else if (this.LCLC > 53060) {
+
+                this.resultadoLCLC = "Insuficiente";
+
+            }
+//>80 -------------------------------------------------------------
+
+        } else if (this.idade >= 80) {
+
+
+            if (this.LCLC < 38350) {
+
+                this.resultadoLCLC = "Muito bom";
+
+            } else if (this.LCLC > 38350 && this.LCLC < 46020) {
+
+                this.resultadoLCLC = "Bom";
+
+            } else if (this.LCLC > 46030 && this.LCLC < 54190) {
+
+                this.resultadoLCLC = "Regular";
+
+            } else if (this.LCLC > 54190) {
+
+                this.resultadoLCLC = "Insuficente";
+
+            }
+
+
+        }
     }
+
+
+    /***********************************************************************************/
+
+
+
 
     public void calcularIG() {
 
@@ -204,7 +807,7 @@ public class CalculaIndices {
 
                 this.resultadoIG = "Regular";
 
-            } else if (this.IG < 33010) {
+            } else if (this.IG > 33010) {
 
                 this.resultadoIG = "Insuficiente";
 
@@ -226,7 +829,7 @@ public class CalculaIndices {
 
                 this.resultadoIG = "Regular";
 
-            } else if (this.IG < 33710) {
+            } else if (this.IG > 33710) {
 
                 this.resultadoIG = "Insufuciente";
 
@@ -248,7 +851,7 @@ public class CalculaIndices {
 
                 this.resultadoIG = "Regular";
 
-            } else if (this.IG < 34410) {
+            } else if (this.IG > 34410) {
 
                 this.resultadoIG = "Insuficiente";
 
@@ -269,7 +872,7 @@ public class CalculaIndices {
 
                 this.resultadoIG = "Regular";
 
-            } else if (this.IG < 35110) {
+            } else if (this.IG > 35110) {
 
                 this.resultadoIG = "Insuficiente";
 
@@ -291,7 +894,7 @@ public class CalculaIndices {
 
                 this.resultadoIG = "Regular";
 
-            } else if (this.IG < 35810) {
+            } else if (this.IG > 35810) {
 
                 this.resultadoIG = "Insuficente";
 

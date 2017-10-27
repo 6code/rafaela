@@ -153,7 +153,8 @@ public class ResultadoActivity extends AppCompatActivity {
         Label label6 = new Label(5,0,"VTC(ms)");
         Label label7 = new Label(6,0,"LCLC(ms)");
         Label label8 = new Label(7, 0, "IG(score)");
-        Label label9 = new Label(8, 0, " - "); //celula para indicar o final
+        Label label9 = new Label(8, 0, "Resultado Geral ");
+        Label label10 = new Label(9, 0, " - "); //celula para indicar o final
 
         // Como o método pode levantar exceção '
         // iremos coloca-lo dentro de um try/catch
@@ -169,6 +170,7 @@ public class ResultadoActivity extends AppCompatActivity {
             plan.addCell(label7);
             plan.addCell(label8);
             plan.addCell(label9);
+            plan.addCell(label10);
 
             wb.write(); //escreve
             wb.close(); //e fecha o arquivo
@@ -198,22 +200,24 @@ public class ResultadoActivity extends AppCompatActivity {
             workbook = Workbook.getWorkbook(folder2);
             wb = Workbook.createWorkbook(file2, workbook);
 
-            Sheet sheet = workbook.getSheet(0);
+            Sheet sheet = workbook.getSheet(0); //recuperando minha tabela 0
             j = sheet.getRows(); // esse metodo retorna o numero de linhas exixtentes
 
             WritableSheet plan1 = wb.getSheet(0);
 
-            Label nome = new Label(0, j, c.getNome() + " ");
-            Label idade = new Label(1, j, c.getIdade() + " ");
-            Label teste1 = new Label(2, j, c.getC10M() + " " + c.getResultadoC10M());
-            Label teste2 = new Label(3, j, c.getLPS() + " " + c.getResultadoLPS());
-            Label teste3 = new Label(4, j, c.getLPDV() + " " + c.getResultadoLPDV());
-            Label teste4 = new Label(5, j, c.getVTC() + " " + c.getResultadoVTC());
-            Label teste5 = new Label(6, j, c.getLCLC() + " " + c.getResultadoLCLC());
-            Label resultado = new Label(7, j, c.getIG() + " " + c.getResultadoIG());
-            Label label9 = new Label(8, j, " - ");
+            //criando celulas
+            Label nome = new Label(0, j, c.getNome() + "");
+            Label idade = new Label(1, j, c.getIdade() + "");
+            Label teste1 = new Label(2, j, c.getC10M() + "");
+            Label teste2 = new Label(3, j, c.getLPS() + "");
+            Label teste3 = new Label(4, j, c.getLPDV() + "");
+            Label teste4 = new Label(5, j, c.getVTC() + "");
+            Label teste5 = new Label(6, j, c.getLCLC() + "");
+            Label ig = new Label(7, j, c.getIG() + "");
+            Label label9 = new Label(8, j, " " + c.getResultadoGeral());
+            Label label10 = new Label(9, j, " - ");
 
-
+            //adicionando na planilha
             plan1.addCell(nome);
             plan1.addCell(idade);
             plan1.addCell(teste1);
@@ -221,8 +225,9 @@ public class ResultadoActivity extends AppCompatActivity {
             plan1.addCell(teste3);
             plan1.addCell(teste4);
             plan1.addCell(teste5);
-            plan1.addCell(resultado);
+            plan1.addCell(ig);
             plan1.addCell(label9);
+            plan1.addCell(label10);
 
             wb.write(); //grava
             wb.close(); //fecha

@@ -17,38 +17,43 @@ import com.developer.image.rafaela.R;
 
 public class TestesActivity extends AppCompatActivity {
 
+    //botoes stop
     private ImageButton s1;
     private ImageButton s2;
     private ImageButton s3;
     private ImageButton s4;
     private ImageButton s5;
 
+    //botoes pause
     private ImageButton p1;
     private ImageButton p2;
     private ImageButton p3;
     private ImageButton p4;
     private ImageButton p5;
 
+    //cronometros
     private Chronometer c1;
     private Chronometer c2;
     private Chronometer c3;
     private Chronometer c4;
     private Chronometer c5;
 
+    //armazena os milisegundos
     private long l1;
     private long l2;
     private long l3;
     private long l4;
     private long l5;
 
-
+    //botoes de navegacoes de tela
     private Button indice;
     private Button reiniciar;
 
+    //strung de permisao
     private String[] MinhasPermissoes = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
 
 
-
+    //oncreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +71,7 @@ public class TestesActivity extends AppCompatActivity {
         }
 
 
-
-
+        //recuperando os elementos pelo id
         s1 = (ImageButton)findViewById(R.id.s1);
         s2 = (ImageButton)findViewById(R.id.s2);
         s3 = (ImageButton)findViewById(R.id.s3);
