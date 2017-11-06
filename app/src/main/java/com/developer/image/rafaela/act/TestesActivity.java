@@ -120,7 +120,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(is1[0] ==1){
 
-                    s1.setBackgroundResource(R.color.colorAccent);
+                    s1.setBackgroundResource(R.color.colorPrimaryDark);
                     is1[0] = 0;
                 }else {
 
@@ -143,7 +143,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(is2[0] ==1){
 
-                    s2.setBackgroundResource(R.color.colorAccent);
+                    s2.setBackgroundResource(R.color.colorPrimaryDark);
                     is2[0] = 0;
                 }else {
 
@@ -165,7 +165,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(is3[0] ==1){
 
-                    s3.setBackgroundResource(R.color.colorAccent);
+                    s3.setBackgroundResource(R.color.colorPrimaryDark);
                     is3[0] = 0;
                 }else {
 
@@ -187,7 +187,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(is4[0] ==1){
 
-                    s4.setBackgroundResource(R.color.colorAccent);
+                    s4.setBackgroundResource(R.color.colorPrimaryDark);
                     is4[0] = 0;
                 }else {
 
@@ -209,7 +209,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(is5[0] ==1){
 
-                    s5.setBackgroundResource(R.color.colorAccent);
+                    s5.setBackgroundResource(R.color.colorPrimaryDark);
                     is5[0] = 0;
                 }else {
 
@@ -230,7 +230,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(ip1[0] ==1){
 
-                    p1.setBackgroundResource(R.color.colorAccent);
+                    p1.setBackgroundResource(R.color.colorPrimaryDark);
 
                     ip1[0]=0;
                 }else {
@@ -252,7 +252,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(ip2[0] ==1){
 
-                    p2.setBackgroundResource(R.color.colorAccent);
+                    p2.setBackgroundResource(R.color.colorPrimaryDark);
 
                     ip2[0]=0;
                 }else {
@@ -273,7 +273,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(ip3[0] ==1){
 
-                    p3.setBackgroundResource(R.color.colorAccent);
+                    p3.setBackgroundResource(R.color.colorPrimaryDark);
 
                     ip3[0]=0;
                 }else {
@@ -294,7 +294,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(ip4[0] ==1){
 
-                    p4.setBackgroundResource(R.color.colorAccent);
+                    p4.setBackgroundResource(R.color.colorPrimaryDark);
 
                     ip4[0]=0;
                 }else {
@@ -315,7 +315,7 @@ public class TestesActivity extends AppCompatActivity {
 
                 if(ip5[0] ==1){
 
-                    p5.setBackgroundResource(R.color.colorAccent);
+                    p5.setBackgroundResource(R.color.colorPrimaryDark);
 
                     ip5[0]=0;
                 }else {

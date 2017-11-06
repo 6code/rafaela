@@ -33,6 +33,7 @@ public class ResultadoActivity extends AppCompatActivity {
     private Button verificar;
     private EditText nome;
     private EditText idade;
+
     private long l1;
     private long l2;
     private long l3;
@@ -154,7 +155,7 @@ public class ResultadoActivity extends AppCompatActivity {
         Label label7 = new Label(6,0,"LCLC(ms)");
         Label label8 = new Label(7, 0, "IG(score)");
         Label label9 = new Label(8, 0, "Resultado Geral ");
-        Label label10 = new Label(9, 0, " - "); //celula para indicar o final
+        Label label10 = new Label(9, 0, " - "); //celula para indicar o fim
 
         // Como o método pode levantar exceção '
         // iremos coloca-lo dentro de um try/catch
@@ -241,6 +242,9 @@ public class ResultadoActivity extends AppCompatActivity {
         } catch (WriteException e) {
             e.printStackTrace();
         }
+
+
+        Toast.makeText(ResultadoActivity.this, "Gravado no arquivo GDLAN.xls!!!", Toast.LENGTH_LONG).show();
 
     }
 

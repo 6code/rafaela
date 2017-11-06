@@ -2,13 +2,13 @@ package com.developer.image.rafaela.model;
 
 public class CalculaIndices {
 
-    private String resultadoGeral;
-    private String resultadoC10M;
-    private String resultadoLPS;
-    private String resultadoLPDV;
-    private String resultadoVTC;
-    private String resultadoLCLC;
-    private String resultadoIG;
+    private String resultadoGeral = "";
+    private String resultadoC10M = "";
+    private String resultadoLPS = "";
+    private String resultadoLPDV = "";
+    private String resultadoVTC = "";
+    private String resultadoLCLC = "";
+    private String resultadoIG = "";
     private String nome;
     private Integer idade;
 
@@ -65,12 +65,13 @@ public class CalculaIndices {
 
     public String getResultadoGeral() {
 
-        this.resultadoGeral = "\t\t\t Resultados:" + "\nC10M: " + resultadoC10M
-                + "\nLPS: " + resultadoLPS
-                + "\nLPDV: " + resultadoLPDV
-                + "\nVTC: " + resultadoVTC
-                + "\nLCLC: " + resultadoLCLC
-                + "\nIG: " + resultadoIG;
+        this.resultadoGeral = "\tResultados:"
+                + "\n C10M: " + resultadoC10M
+                + "\n LPS: " + resultadoLPS
+                + "\n LPDV: " + resultadoLPDV
+                + "\n VTC: " + resultadoVTC
+                + "\n LCLC: " + resultadoLCLC
+                + "\n IG: " + resultadoIG;
 
         return this.resultadoGeral;
     }
