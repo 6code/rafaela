@@ -1,7 +1,7 @@
 package com.developer.image.rafaela.model;
 
 public class CalculaIndices {
-
+    private String Teste = null;
     private String resultadoGeral = "";
     private String resultadoC10M = "";
     private String resultadoLPS = "";

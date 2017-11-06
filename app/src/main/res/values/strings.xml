@@ -1,10 +1,4 @@
 <resources>
     <string name="app_name">GDLAM</string>
-    <string name="reiniciar">Reiniciar ?</string>
-    <string name="_6code384_gmail_com">6code384@gmail.com</string>
-    <string name="calcular_ndice">Calcular índice</string>
-    <string name="fim">FIM</string>
-    <string name="realiza_o_dos_testes">REALIZAÇÃO DOS TESTES</string>
-    <string name="stop">STOP</string>
     <color name="cor">#fcfcfc</color>
 </resources>
